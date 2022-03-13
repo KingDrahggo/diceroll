@@ -1,0 +1,56 @@
+***When rolling two six-sided dice, each die will show a number
+between 1 and 6. When the numbers on the two dice are added 
+together, they will sum to a number between 2 and 12.***
+
+***Build an app which rolls a pair of dice 1000 times! 
+Recording how frequently each number, 2 to 12, shows up.***
+
+
+Part 1:
+a. Create a function called rollDie() 
+which returns a random number between 1-6.
+b.Then make another function which 
+rolls two dice and adds together the sum.
+    -Hint: The second function can call your *rollDie()* function! 
+    If you call it twice, you can then add the two 
+    numbers together to get the sum.
+c.In the HTML, there is already a button with the id roll 
+and a div with the id result. Using JavaScript,get both of
+those items by id and assign them to variables.
+d.Create an event listener on the button for the "click" event. 
+Make a callback function and pass it into the click event.
+e.In this callback function, call your rollDie() method and 
+store the number in a variable.
+    -Output a sentence stating what number was rolled to 
+    the "result" div.
+    -Your app should now be working like the app above!
+
+Part 2:
+***Next you are going to keep track off every dice roll. 
+At the top of your JS file is the results array.
+let results = [null, null, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+Use this array to keep track of how many times each 
+result has occurred.***
+a.***Notice the two nulls at the beginning of the array. When you 
+roll two dice and add them, they will produce a number between 
+2 and 12. So it is not possible to get a 0 or a 1!***
+b.***You can use that number as the index of the array, and 
+increment that number. Now the number in the sixth position 
+would be 1. Every time you roll a number, you increment that
+index by one. Then you know how many times that number was 
+rolled!***
+c.Then render each value of the results array inside of the
+"graph" div.
+    -To do this, create a new function renderGraph(). Have 
+    that function loop through the results array. For every 
+    value create a div and add it to the graph, adding the 
+    number into the div.
+    -You can set the "graph" div to be a flexbox container 
+    to have them display horizontally.
+
+Step 3:
+a.Next, add another button to your HTML and give it an id. This 
+button should Roll 1000 pairs of dice!
+b.Create the event listener and callback just like the other button.
+Have your callback run a loop 1000 times, rolling a pair of dice 
+and recording the result into the results array each time.
